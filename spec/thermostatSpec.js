@@ -59,9 +59,26 @@ describe('Thermostat', function() {
         expect(thermostat.powersavemode).toEqual(true);
     });
 
+    it('can ask about the thermostat usage: < 18 is low-usage', function(){
+        thermostat = new Thermostat()
+        for (i = 0; i<=11; i++) {
+            thermostat.down()
+        }
+        expect(thermostat.usage()).toEqual('low-usage');    
+    });
 
+    it('can ask about the thermostat usage: < 25 is medium-usage', function(){
+        thermostat = new Thermostat()
+        expect(thermostat.usage()).toEqual('medium-usage');    
+    });
 
-
+    it('can ask about the thermostat usage: <= 25 is high-usage', function(){
+        thermostat = new Thermostat()
+        for (i = 0; i<=15; i++) {
+            thermostat.up()
+        }
+        expect(thermostat.usage()).toEqual('high-usage');    
+    });
 
 
 
