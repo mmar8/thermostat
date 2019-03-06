@@ -10,6 +10,12 @@ describe('Thermostat', function() {
         expect(thermostat.temperature).toEqual(21);
     });
 
+    it('can decrese the temerature with a down function', function(){
+        thermostat = new Thermostat()
+        thermostat.down()
+        expect(thermostat.temperature).toEqual(19);
+    });
+
 
 
 

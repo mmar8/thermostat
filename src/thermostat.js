@@ -8,3 +8,7 @@ Thermostat.prototype.up = function() {
     console.log(this.temperature)
 }
 
+Thermostat.prototype.down = function() {
+    this.temperature--
+    console.log(this.temperature)
+}
