@@ -72,7 +72,7 @@ describe('Thermostat', function() {
         expect(thermostat.usage()).toEqual('medium-usage');    
     });
 
-    it('can ask about the thermostat usage: <= 25 is high-usage', function(){
+    it('can ask about the thermostat usage: >= 25 is high-usage', function(){
         thermostat = new Thermostat()
         for (i = 0; i<=15; i++) {
             thermostat.up()
