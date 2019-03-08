@@ -20,12 +20,14 @@ $(document).ready(function() {
 
      $( "#powersaving-on" ).click(function() {
           thermostat.powersave();
-      $( "#temperature" ).text(thermostat.temperature); 
+      $( "#temperature" ).text(thermostat.temperature);
+      $('#power-saving-status').text("ON"); 
      });
 
      $( "#powersaving-off" ).click(function() {
           thermostat.powersave("off");
-      $( "#temperature" ).text(thermostat.temperature); 
+      $( "#temperature" ).text(thermostat.temperature);
+      $('#power-saving-status').text("OFF");  
      });
 
      function updateTemp(){
@@ -38,6 +40,5 @@ $(document).ready(function() {
           $("#temperature").css('color','red')
        }  
      };
-     
 
 });
